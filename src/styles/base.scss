@@ -1,0 +1,12 @@
+@import '../../node_modules/material-design-lite/src/material-design-lite';
+// @import '../../node_modules/mdi/scss/materialdesignicons';
+
+h1 {
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}

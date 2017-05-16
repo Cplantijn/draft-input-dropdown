@@ -1,6 +1,7 @@
 import ReactDOM from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
 import App from './container/App';
+require('../../node_modules/material-design-lite/material.min.js');
 
 const render = (Component) => {
   ReactDOM.render(
@@ -12,10 +13,3 @@ const render = (Component) => {
 };
 
 render(App);
-
-if (module.hot) {
-  module.hot.accept('./container/App', () => {
-    const newApp = require('./container/App').default;
-    render(newApp);
-  });
-}

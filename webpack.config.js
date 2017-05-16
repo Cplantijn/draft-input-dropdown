@@ -7,9 +7,6 @@ const config = {
   devtool: 'cheap-module-eval-source-map',
   context: resolve(__dirname, 'src'),
   entry: [
-    'react-hot-loader/patch',
-    'webpack-dev-server/client?http://localhost:8080',
-    'webpack/hot/only-dev-server',
     './js/index.js',
   ],
   output: {
@@ -18,7 +15,6 @@ const config = {
     publicPath: '/'
   },
   devServer: {
-    hot: true,
     contentBase: resolve(__dirname, 'dist'),
     publicPath: '/'
   },
@@ -33,11 +29,13 @@ const config = {
           'sass-loader'
         ],
         exclude: /node_modules/
+      },
+      { test: /\.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
+        loader: 'file-loader'
       }
     ]
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
       template: `${__dirname}/src/index.html`,
       filename: 'index.html',

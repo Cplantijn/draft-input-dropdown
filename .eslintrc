@@ -17,6 +17,8 @@
     "linebreak-style": 0,
     "global-require": 0,
     "comma-dangle": 0,
+    "no-underscore-dangle": 0,
+    "react/require-default-props": 0,
     "react/react-in-jsx-scope": 0
   }
 }
